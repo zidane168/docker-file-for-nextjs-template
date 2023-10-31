@@ -1,0 +1,39 @@
+version: '3'
+services:
+    crystaljade-nginx:
+        networks:
+            - dev-vn-networks
+        ports:
+            - "8183:80"
+        container_name: crystaljade-nginx
+        restart: always
+        image: nginx:latest
+        volumes:
+            - ./default.conf:/etc/nginx/conf.d/default.conf
+        labels:
+            - "traefik.docker.network=dev-vn-networks"
+            - "traefik.enable=true"
+            - "traefik.basic.frontend.rule=Host:staging-web.crystaljade.hk"
+            - "traefik.basic.port=80"
+            - "traefik.basic.protocol=http"
+        links:
+            - crystaljade-web
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.5'
+                    memory: 512M
+    crystaljade-web:
+        networks:
+            - dev-vn-networks
+        container_name: crystaljade-web
+        restart: always
+        image: crystaljade-web-img:1.0.0
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.5'
+                    memory: 512M
+networks:
+    dev-vn-networks:
+        external: true
