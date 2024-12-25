@@ -1,0 +1,28 @@
+export const NODE_ENV = process.env.NODE_ENV;
+
+export const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION;
+export const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN;
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
+export const API_DOMAIN = process.env.NEXT_PUBLIC_API_DOMAIN;
+export const API_HOST = process.env.NEXT_PUBLIC_API_HOST;
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
+export const CDN_DOMAIN = process.env.NEXT_PUBLIC_CDN_DOMAIN;
+export const CDN_HOST = process.env.NEXT_PUBLIC_CDN_HOST;
+
+export const DEFAULT_LOCALE = process.env.NEXT_PUBLIC_DEFAULT_LOCALE;
+
+export const FIREBASE_API_KEY = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
+export const FIREBASE_AUTH_DOMAIN =
+  process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN;
+export const FIREBASE_PROJECT_ID = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
+export const FIREBASE_STORAGE_BUCKET =
+  process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET;
+export const FIREBASE_MESSAGING_SENDER_ID =
+  process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID;
+export const FIREBASE_APP_ID = process.env.NEXT_PUBLIC_FIREBASE_APP_ID;
+export const FIREBASE_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID;
+export const FIREBASE_MESSAGING_VAPID_KEY =
+  process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_VAPID_KEY;
